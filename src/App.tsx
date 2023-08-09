@@ -1,9 +1,10 @@
 import "./App.css";
+import ListOfUsers from "./components/ListOfUsers";
 
 function App() {
 	return (
 		<>
-			<h1>Nuestro proyecto con redux</h1>
+      <ListOfUsers />
 		</>
 	);
 }
