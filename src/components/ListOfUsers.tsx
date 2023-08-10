@@ -9,34 +9,11 @@ import {
   TableRow,
   Title
 } from "@tremor/react";
+import { useAppSelector } from "../hooks/store";
 
-const users: {
-	id: string;
-	name: string;
-	email: string;
-	github: string;
-}[] = [
-	{
-		id: "1",
-		name: "Angelica",
-		email: "angelica@gmail.com",
-		github: "yessblack",
-	},
-	{
-		id: "2",
-		name: "Miguel",
-		email: "midu@gmail.com",
-		github: "midudev",
-	},
-	{
-		id: "2",
-		name: "Natalia",
-		email: "nati@gmail.com",
-		github: "natioterom",
-	},
-];
 
 export default function ListOfUsers() {
+  const users = useAppSelector(state => state.users)
 	return (
 		<Card>
       <Title>
